@@ -1,8 +1,14 @@
 import { forceCheck } from "react-lazyload";
-// import { navigateTo } from 'gatsby-link';
+import { navigateTo } from "gatsby-link";
 
 export function featureNavigator(e) {
   e && e.preventDefault();
+
+  // for now i am blindly going to home page and not caring about below CSSConditionRule, if there is a bug refer below code
+  setTimeout(() => {
+    navigateTo("/");
+  }, 0);
+  return;
 
   if (this.props.navigatorPosition === "is-aside") {
     if (this.props.isWideScreen) {
@@ -16,11 +22,10 @@ export function featureNavigator(e) {
 
           // uncomment following lines if you want to count featuring Navigator as a visit
           // to index page ('/'), you have to also uncomment import { navigateTo }...
-          /*
+
           setTimeout(() => {
             navigateTo("/");
-          }, 1000);
-          */
+          }, 0);
         });
       }, 300);
     } else {
