@@ -1,16 +1,16 @@
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import IconButton from '@material-ui/core/IconButton';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import Paper from '@material-ui/core/Paper';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import classNames from 'classnames';
-import Link from 'gatsby-link';
-import PropTypes from 'prop-types';
-import React from 'react';
-import injectSheet from 'react-jss';
-import {Manager, Popper, Target} from 'react-popper';
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import Grow from "@material-ui/core/Grow";
+import IconButton from "@material-ui/core/IconButton";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuList from "@material-ui/core/MenuList";
+import Paper from "@material-ui/core/Paper";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import classNames from "classnames";
+import Link from "gatsby-link";
+import PropTypes from "prop-types";
+import React from "react";
+import injectSheet from "react-jss";
+import { Manager, Popper, Target } from "react-popper";
 
 const styles = theme => ({
   topMenu: {
@@ -85,7 +85,7 @@ class TopMenu extends React.Component {
                     >
                       Home
                     </MenuItem>
-                    {pages.map((page, i) => {
+                    {/* {pages.map((page, i) => {
                       const { fields, frontmatter } = page.node;
 
                       return (
@@ -110,7 +110,7 @@ class TopMenu extends React.Component {
                       >
                         Contact
                       </MenuItem>
-                    </Link>
+                    </Link> */}
                   </MenuList>
                 </Paper>
               </Grow>
