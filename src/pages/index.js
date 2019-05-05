@@ -46,17 +46,20 @@ const mapDispatchToProps = {
   setNavigatorShape
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Index);
 
 //eslint-disable-next-line no-undef
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        facebook {
-          appId
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     site {
+//       siteMetadata {
+//         facebook {
+//           appId
+//         }
+//       }
+//     }
+//   }
+// `;

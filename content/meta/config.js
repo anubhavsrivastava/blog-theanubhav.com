@@ -8,6 +8,7 @@ module.exports = {
   pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
+  disqusShortname: "theanubhav",
   // author
   authorName: "Anubhav Srivastava",
   authorTwitterAccount: "onlyanubhav",
@@ -19,7 +20,7 @@ module.exports = {
   manifestShortName: "PersonalBlog", // max 12 characters
   manifestStartUrl: "/",
   manifestBackgroundColor: colors.background,
-  manifestThemeColor: colors.background,
+  manifestThemeColor: colors.accent,
   manifestDisplay: "standalone",
   // contact
   contactEmail: "anubhav.srivastava00@gmail.com",
