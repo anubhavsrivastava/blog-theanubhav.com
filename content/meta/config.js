@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: "theAnubhav - Anubhav's Personal blog", // <title>
   shortSiteTitle: "theAnubhav - Anubhav's Personal blog", // <title> ending for posts and pages
   siteDescription: "theAnubhav - Anubhav's Personal blog",
-  siteUrl: "https://gatsby-starter-personal-blog.greglobinski.com",
+  siteUrl: "https://theanubhav.com",
   pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",

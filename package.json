@@ -5,9 +5,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
-    "build": "gatsby build",
+    "develop": "npm run clean && gatsby develop",
+    "build": "npm run clean && gatsby build",
     "serve": "gatsby serve",
+    "clean": "rimraf .cache public",
+    "deploy": "npm run clean && gatsby build && gh-pages -d public",
     "format-output": "prettier src/**/*.{js,jsx}",
     "format": "prettier --write src/**/*.{js,jsx}",
     "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
@@ -27,7 +29,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.13.7",
+    "rimraf": "^2.6.3",
     "sharp-cli": "^1.7.0",
     "webpack-bundle-analyzer": "^2.13.1"
   },
