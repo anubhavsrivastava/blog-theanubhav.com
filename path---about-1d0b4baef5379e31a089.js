@@ -1,0 +1,2 @@
+webpackJsonp([0xf927f8900006],{797:function(a,t){a.exports={data:{page:{id:"/Users/anubhavsrivastava/Developer/PProjects/blog@theanubhav.com/content/pages/1--about/index.md absPath of file >>> MarkdownRemark",html:"",frontmatter:{title:"About"}},footnote:{id:"/Users/anubhavsrivastava/Developer/PProjects/blog@theanubhav.com/content/parts/footnote.md absPath of file >>> MarkdownRemark",html:'<hr>\n<ul>\n<li><a href="https://about.theanubhav.com">Anubhav Srivastava</a></li>\n</ul>'}},pathContext:{slug:"/about/"}}}});
+//# sourceMappingURL=path---about-1d0b4baef5379e31a089.js.map

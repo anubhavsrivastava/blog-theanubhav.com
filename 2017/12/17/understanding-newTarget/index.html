@@ -1,0 +1,1618 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/component---src-layouts-index-js-5cad8864707b19adb258.js" as="script"/><link rel="preload" href="/component---src-templates-post-template-js-1d8e36c3fe933e1b7880.js" as="script"/><link rel="preload" href="/path---2017-12-17-understanding-new-target-08b3079c7075aae8ce55.js" as="script"/><link rel="preload" href="/app-f73c7d77683a26330045.js" as="script"/><link rel="preload" href="/commons-91efb3dbe8d9556dbead.js" as="script"/><style type="text/css" id="server-side-jss">html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+.jss46 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.jss47 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+}
+.jss48 {
+  opacity: 0.3;
+  transform: scale(1);
+  animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss49 {
+  animation-duration: 200ms;
+}
+.jss50 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.jss51 {
+  opacity: 0;
+  animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss52 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@keyframes mui-ripple-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@keyframes mui-ripple-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mui-ripple-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.jss36 {
+  color: inherit;
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  display: inline-flex;
+  padding: 0;
+  outline: none;
+  position: relative;
+  user-select: none;
+  align-items: center;
+  border-radius: 0;
+  vertical-align: middle;
+  justify-content: center;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.jss36::-moz-focus-inner {
+  border-style: none;
+}
+.jss36.jss37 {
+  cursor: default;
+  pointer-events: none;
+}
+.jss30 {
+  flex: 0 0 auto;
+  width: 48px;
+  color: rgba(0, 0, 0, 0.54);
+  height: 48px;
+  padding: 0;
+  font-size: 1.7142857142857142rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.jss30:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss30.jss34 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss30:hover {
+    background-color: transparent;
+  }
+}
+.jss30:hover.jss34 {
+  background-color: transparent;
+}
+.jss31 {
+  color: inherit;
+}
+.jss32 {
+  color: #f7a046;
+}
+.jss32:hover {
+  background-color: rgba(247, 160, 70, 0.08);
+}
+@media (hover: none) {
+  .jss32:hover {
+    background-color: transparent;
+  }
+}
+.jss33 {
+  color: #f50057;
+}
+.jss33:hover {
+  background-color: rgba(245, 0, 87, 0.08);
+}
+@media (hover: none) {
+  .jss33:hover {
+    background-color: transparent;
+  }
+}
+.jss35 {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.jss39 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 24px;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}
+.jss40 {
+  color: #f7a046;
+}
+.jss41 {
+  color: #f50057;
+}
+.jss42 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.jss43 {
+  color: #f44336;
+}
+.jss44 {
+  color: rgba(0, 0, 0, 0.26);
+}
+.jss45 {
+  font-size: inherit;
+}
+.jss56 {
+  background-color: #fff;
+}
+.jss57 {
+  border-radius: 4px;
+}
+.jss58 {
+  box-shadow: none;
+}
+.jss59 {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.jss60 {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+.jss61 {
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+.jss62 {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.jss63 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.jss64 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss65 {
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+}
+.jss66 {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss67 {
+  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+}
+.jss68 {
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+}
+.jss69 {
+  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+}
+.jss70 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss71 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.jss72 {
+  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+}
+.jss73 {
+  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+}
+.jss74 {
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+.jss75 {
+  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+}
+.jss76 {
+  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+}
+.jss77 {
+  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+}
+.jss78 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+}
+.jss79 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+}
+.jss80 {
+  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+}
+.jss81 {
+  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+}
+.jss82 {
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+.jss89 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.jss90 {
+  position: relative;
+}
+.jss91 {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+.jss93 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.jss94 {
+  opacity: 0.5;
+}
+.jss95 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background-clip: padding-box;
+}
+.jss96 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .jss96 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.jss97 {
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.jss97:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+@media (hover: none) {
+  .jss97:hover {
+    background-color: transparent;
+  }
+}
+.jss98 {
+  padding-right: 32px;
+}
+.jss87 {
+  width: auto;
+  color: rgba(0, 0, 0, 0.87);
+  height: 24px;
+  overflow: hidden;
+  font-size: 1.1428571428571428rem;
+  box-sizing: content-box;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  padding-left: 16px;
+  text-overflow: ellipsis;
+  padding-right: 16px;
+}
+.jss87.jss88 {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.jss83 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+.jss84 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.jss85 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.jss86 {
+  padding-top: 0;
+}
+.jss103 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.4285714285714284rem;
+  flex-shrink: 0;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  user-select: none;
+  border-radius: 50%;
+  justify-content: center;
+}
+.jss104 {
+  color: #fafafa;
+  background-color: #bdbdbd;
+}
+.jss105 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+}
+.jss19 {
+  display: none;
+}
+.is-aside.closed .jss19, .moving-featured.closed .jss19 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  display: flex;
+  padding: 0 30px 0 40px;
+  position: absolute;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.jss19 h3 {
+  color: #555555;
+  margin: -.2em 0 0 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.jss19 h3 small {
+  margin: 0 0 .1em;
+  display: block;
+  font-size: .6em;
+  font-weight: 300;
+  letter-spacing: .2em;
+}
+.jss20 {
+  color: #555555;
+}
+.jss21 {
+  color: #f7a046;
+  margin: 0 calc(-.5rem + 20px) 1em calc(-.5rem + 20px);
+  padding: 0 1em 1em;
+  position: relative;
+  font-size: 1.2em;
+  line-height: 1;
+  font-weight: 300;
+  border-bottom: 1px solid #dedede;
+}
+.jss21 strong {
+  display: block;
+  font-weight: 600;
+}
+.jss21 small {
+  margin: 0 0 .3em 0;
+  display: block;
+}
+@media (min-width: 1024px) {
+  .jss21 {
+    margin: 0 0 1em 0;
+    padding: 0 1em 1.5em;
+  }
+  .is-aside .jss21 {
+    margin: 0 calc(-.5rem + 20px) 1em calc(-.5rem + 20px);
+    padding: 0 0 1em .5em;
+  }
+}
+.jss22 {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.jss23 {
+  margin: 0 0 .7em 0;
+  transition: height 1s;
+}
+@media (min-width: 600px) {
+  .jss23 {
+    margin: 0 0 1.5rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .moving-featured .jss23, .is-aside .jss23 {
+    margin: 0 0 0 0;
+  }
+}
+.jss24 {
+  color: #555555;
+  display: flex;
+  padding: .7em 1em .7em 1em;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media (hover: hover) {
+  .jss24:hover {
+    color: #f7a046;
+  }
+  .jss24:hover .pointer {
+    border-radius: 65% 75%;
+  }
+}
+.jss25 {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s;
+  flex-shrink: 0;
+  border-radius: 75% 65%;
+}
+.jss25 img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 600px) {
+  .jss25 {
+    width: 80px;
+    height: 80px;
+    margin-right: .5em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss25 {
+    width: 90px;
+    height: 90px;
+    transition: all .3s;
+    margin-right: .8em;
+    transition-timing-function: ease;
+  }
+  .moving-featured .jss25, .is-aside .jss25 {
+    width: 30px;
+    height: 30px;
+  }
+}
+.jss26 {
+  width: 100%;
+  margin: 0 0 0 1.5em;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.jss26 h1 {
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.jss26 h2 {
+  margin: .3em 0 0 0;
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.2;
+}
+@media (min-width: 1024px) {
+  .moving-featured .jss26, .is-aside .jss26 {
+    margin: 0 0 0 .5em;
+  }
+}
+@media (min-width: 600px) {
+  .jss26 h2 {
+    font-size: 1.265em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss26 h2 {
+    font-size: 1.4300000000000002em;
+  }
+  .moving-featured .jss26 h2, .is-aside .jss26 h2 {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .jss26 h1 {
+    font-size: 1.4949999999999999em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss26 h1 {
+    font-size: 1.6900000000000002em;
+  }
+  .moving-featured .jss26 h1, .is-aside .jss26 h1 {
+    font-size: 1em;
+    font-weight: 400;
+  }
+}
+.jss16 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.jss17 {
+  padding: calc(60px + 1.3rem) 1.3rem calc(60px + 1.3rem) 1.3rem;
+}
+@media (min-width: 600px) {
+  .jss17 {
+    padding: calc(60px + 2rem) 2rem calc(60px + 2rem) 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .jss17 {
+    left: 320px;
+    padding: 2rem  calc(1rem + 17px) calc(2rem + 17px) 2rem;
+  }
+  .moving-featured .jss17, .is-aside .jss17 {
+    padding: 1rem .5rem 1rem .5rem;
+  }
+}
+.jss18 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.is-aside.closed .jss18, .moving-featured.closed .jss18 {
+  display: none;
+}
+.jss15 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  background: #ffffff;
+  transition: left .9s;
+  will-change: left, top, bottom, width;
+  transition-timing-function: ease;
+}
+@media (max-width: 1023px) {
+  .jss15.is-aside {
+    left: -100%;
+  }
+  .jss15.is-featured {
+    left: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .jss15.is-featured {
+    top: 0;
+    left: 320px;
+    width: calc(100vw - 320px - 60px);
+    transition: left .9s;
+  }
+  .jss15.is-aside {
+    top: auto;
+    left: 0;
+    width: 319px;
+    z-index: 1;
+    transition: none, bottom 0.5s;
+  }
+  .jss15.moving-aside {
+    top: 0;
+    left: calc(-100vw + 700px);
+    width: calc(100vw - 320px - 60px);
+    transition: left 0.9s;
+  }
+  .jss15.resizing-aside {
+    top: auto;
+    left: 0;
+    width: 319px;
+    transition: none;
+  }
+  .jss15.moving-featured {
+    top: auto;
+    left: 0;
+    width: 319px;
+    bottom: -100%;
+    z-index: 1;
+    transition: bottom .3s;
+  }
+  .jss15.resizing-featured {
+    top: 0;
+    left: calc(-100vw + 700px);
+    width: calc(100vw - 320px - 60px);
+    bottom: auto;
+    transition: none;
+  }
+  .jss15.resizing-aside.closed {
+    bottom: calc(-100% + 100px);
+    height: calc(100% - 100px);
+  }
+  .jss15.resizing-aside.open {
+    bottom: calc(-100% + 100px);
+    height: calc(100% - 100px);
+  }
+  .jss15.is-aside.closed {
+    bottom: calc(-100% + 100px + 80px);
+    height: calc(100% - 100px);
+  }
+  .jss15.is-aside.open {
+    bottom: 0;
+    height: calc(100% - 100px);
+  }
+  .jss15.is-aside::after {
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 0;
+    content: "";
+    position: absolute;
+    border-top: 1px solid #dedede;
+  }
+}
+.jss54 {
+  color: #555555;
+}
+.jss55 {
+  pointer-events: none;
+}
+.jss27 {
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 60px;
+  display: flex;
+  padding: 0 20px;
+  position: absolute;
+  background: #ffffff;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.jss27::before {
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 0;
+  content: "";
+  position: absolute;
+  border-top: 1px solid #dedede;
+}
+@media (min-width: 600px) {
+  .jss27 {
+    padding: 0 calc(20px * 1.5);
+  }
+}
+@media (min-width: 1024px) {
+  .jss27 {
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    padding: 20px 0;
+    flex-direction: column;
+  }
+  .jss27::before {
+    top: 20px;
+    left: 0;
+    right: auto;
+    width: 0;
+    bottom: 20px;
+    height: auto;
+    border-left: 1px solid #dedede;
+  }
+}
+.jss28 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+@media (min-width: 1024px) {
+  .jss28 {
+    flex-direction: column;
+  }
+}
+.jss29 {
+  color: #555555;
+}
+.jss106 {
+  float: right;
+  margin: 5px 10px 0 0;
+}
+.jss107 {
+  color: #555555;
+}
+.jss108 {
+  pointer-events: none;
+}
+.jss99 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  background: #ffffff;
+}
+.jss99::before {
+  left: 20px;
+  right: 20px;
+  height: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  border-top: 1px solid #dedede;
+}
+@media (min-width: 1024px) {
+  .jss99 {
+    display: none;
+  }
+}
+.jss100 {
+  float: left;
+  color: #555555;
+  margin: 10px 0 0 15px;
+}
+.jss100 small {
+  margin: 2px 0 0 0;
+  display: block;
+  font-size: .65em;
+}
+.jss101 {
+  float: left;
+  margin: 13px 0 0 30px;
+  display: block;
+}
+.jss102 {
+  width: 36px;
+  border: 1px solid #ddd;
+  height: 36px;
+  border-radius: 65% 75%;
+}
+.jss1 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+@media print {
+  .jss1 {
+    position: relative;
+    overflow: visible;
+  }
+}
+article, aside, footer, header, nav, section, figcaption, figure, main {
+  display: block;
+}
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+hr {
+  height: 0;
+  overflow: visible;
+  box-sizing: content-box;
+}
+pre {
+  font-size: 1em;
+  font-family: monospace, monospace;
+}
+a:active, a:hover {
+  outline-width: 0;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+}
+b, strong {
+  font-weight: bolder;
+}
+code, kbp, samp {
+  font-size: 1em;
+  font-family: monospace, monospace;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  color: #000;
+  background-color: #ff0;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+audio, video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  height: 0;
+  display: none;
+}
+img {
+  border-style: none;
+  vertical-align: middle;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+button, input {
+  overflow: visible;
+}
+button, select {
+  text-transform: none;
+}
+button, [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  color: inherit;
+  display: table;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type=checkbox], [type=radio] {
+  padding: 0;
+  box-sizing: border-box;
+}
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type=search] {
+  appearance: textfield;
+  outline-offset: -2px;
+}
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+  appearance: button;
+}
+details, menu {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+canvas {
+  display: inline-block;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+html {
+  box-sizing: border-box;
+  font-family: Arial;
+  line-height: 1.15;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
+}
+html.wf-active {
+  font-family: Open Sans;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+noscript {
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  z-index: 1000;
+  padding: 1.5rem 2.5rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #d00;
+  box-shadow: 0 0 10px 52px rgba(255,255,255,.8);
+  font-weight: 400;
+  border-radius: 2px;
+}
+body {
+  margin: 0;
+  background: #ffffff;
+  -webkit-tap-highlight-color: rgba(0,0,0,.05);
+}
+main {
+  position: relative;
+}
+h1, h2, h3 {
+  font-weight: 300;
+}
+a {
+  background: transparent;
+  transition: 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+  text-decoration-skip: objects;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
+:not(pre) > code[class*='language-'] {
+  color: #666;
+  padding: 1px 5px;
+  background: #eee;
+  text-shadow: none;
+  border-radius: 2px;
+}
+.jss2 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  animation-name: main-entry;
+  animation-duration: .5s;
+}
+@media (min-width: 1024px) {
+  .jss2 {
+    left: 320px;
+    width: calc(100vw - 320px - 60px);
+  }
+}
+@media print {
+  .jss2 {
+    position: relative;
+  }
+  .jss2 > div {
+    overflow: visible!important;
+  }
+  .jss2 > div > div {
+    position: relative!important;
+  }
+}
+.jss3 {
+  margin: 0 auto;
+  padding: calc(1.5rem + undefinedpx) 1.8rem 1.5rem 1.5rem;
+}
+.jss3 strong, .jss3 b {
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+.jss3 a {
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: 600;
+  text-shadow: 
+         2px  2px #ffffff,
+        -2px  2px #ffffff,
+        -2px -2px #ffffff,
+        -2px  2px #ffffff,
+        -2px  0   #ffffff,
+         2px  0   #ffffff
+      ;
+  letter-spacing: -.02em;
+  text-decoration: none;
+}
+@media (min-width: 600px) {
+  .jss3 {
+    padding: calc(2.5rem + undefinedpx) 3.5rem 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .jss3 {
+    padding: 3.5rem;
+  }
+}
+.jss3 a:hover {
+  color: hsl(30.5, 91.7%, 68.4%);
+}
+@keyframes main-entry {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.jss4 {
+  margin: 0 auto;
+  padding: calc(60px + 1.5rem) 1.5rem  1.5rem 1.5rem;
+  max-width: 50em;
+  background: #ffffff;
+}
+.jss4 strong, .jss4 b {
+  letter-spacing: -.02em;
+}
+.jss4 a {
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: -.02em;
+  text-decoration: underline;
+}
+@media (min-width: 600px) {
+  .jss4 {
+    padding: calc(2.5rem + 60px) 3.5rem 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .jss4 {
+    padding: 3.5rem;
+  }
+}
+.jss4 a:hover {
+  color: hsl(30.5, 91.7%, 68.4%);
+}
+.jss5 {
+  margin: 0 0 3em;
+}
+.jss6 {
+  color: #555555;
+  margin: 0 0 0.4em;
+  font-size: 1.9em;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+@media (min-width: 600px) {
+  .jss6 {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss6 {
+    font-size: 2.7em;
+    letter-spacing: -0.05em;
+  }
+}
+.jss7 {
+  color: #555555;
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: 300;
+}
+@media (min-width: 600px) {
+  .jss7 {
+    font-size: 1.8em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss7 {
+    font-size: 1.95em;
+  }
+}
+.jss8 {
+  color: #555555;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.jss9 {
+  color: #333333;
+  line-height: 1.6;
+}
+.jss9 a {
+  color: #f7a046;
+}
+.jss9 .gatsby-highlight {
+  margin: 2em 0;
+}
+.jss9 .gatsby-resp-iframe-wrapper {
+  margin: 2em 0;
+}
+.jss9 .gatsby-resp-image-link {
+  margin: 2em -1.5rem;
+  border: none;
+}
+.jss9 h2, .jss9 h3 {
+  color: #555555;
+  margin: 2em 0 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.jss9 h3 {
+  font-size: 1.3em;
+}
+.jss9 p {
+  margin: 0 0 1.5em 0;
+  font-weight: 400;
+}
+.jss9 ul {
+  padding: 0 0 0 1.3em;
+  list-style: circle;
+}
+.jss9 li {
+  margin: 0 0 .5em 0;
+}
+.jss9 blockquote {
+  border: 5px solid #bbbbbb;
+  margin: 2.5em 0;
+  padding: 1em 1.1em 1em 1.3em;
+  position: relative;
+  font-style: italic;
+}
+@media (min-width: 600px) {
+  .jss9 {
+    font-size: 1.15em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss9 {
+    font-size: 1.1em;
+  }
+}
+.jss9 blockquote p {
+  margin: 0;
+}
+.jss9 blockquote::before, .jss9 blockquote::after {
+  top: -5px;
+  left: 50%;
+  width: 94%;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  margin-left: -47%;
+}
+.jss9 blockquote::after {
+  top: auto;
+  bottom: -5px;
+}
+@media (min-width: 600px) {
+  .jss9 ul {
+    padding: 0 0 0 2em;
+  }
+}
+@media (min-width: 600px) {
+  .jss9 .gatsby-resp-image-link {
+    margin: 2.5em -3.5rem;
+  }
+}
+.jss10 {
+  font-size: calc(1em * 1);
+}
+.jss12 {
+  margin: 3em 0 0;
+  padding: 3em 0 0;
+  border-top: 1px solid #ddd;
+}
+.jss11 {
+  color: #555555;
+  font-size: 1em;
+  line-height: 1.4;
+}
+.jss11 p {
+  margin: 0;
+}
+.jss14 {
+  color: hsl(0, 0%, 50%);
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+.jss14 a {
+  color: #f7a046;
+  font-weight: normal;
+  text-shadow: none;
+}
+.jss14 a:hover {
+  color: hsl(30.5, 91.7%, 74.6%);
+}
+.jss14 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.jss14 li {
+  margin: 0 .3em;
+  display: inline-block;
+}
+.jss13 {
+  color: #555555;
+  padding: 1.5rem 1.5rem  calc(60px + 1.5rem) 1.5rem;
+}
+.jss13 p {
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .jss13 {
+    padding: 2rem 2.5rem  calc(60px + 2rem) 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .jss13 {
+    padding: 2rem 3rem 2rem 3rem;
+  }
+}</style><title data-react-helmet="true">Understanding meta-property - newTarget - theAnubhav - Anubhav&#x27;s Personal blog</title><meta data-react-helmet="true" name="description" content="theAnubhav - Anubhav&#x27;s Personal blog"/><meta data-react-helmet="true" property="og:url" content="https://theanubhav.com2017/12/17/understanding-newTarget/"/><meta data-react-helmet="true" property="og:title" content="Understanding meta-property - newTarget - theAnubhav - Anubhav&#x27;s Personal blog"/><meta data-react-helmet="true" property="og:description" content="theAnubhav - Anubhav&#x27;s Personal blog"/><meta data-react-helmet="true" property="og:image" content="/static/avatar-js-5e57f06d1be55aa3f60500b3f62368c6-160fa.png"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="onlyanubhav"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#f7a046"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style id="gatsby-inlined-css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8"/><meta name="apple-mobile-web-app-title" content="Lazywill"/><link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57"/><link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60"/><link rel="apple-touch-icon" href="/icons/apple-icon-72x72.png" sizes="72x72"/><link rel="apple-touch-icon" href="/icons/apple-icon-76x76.png" sizes="76x76"/><link rel="apple-touch-icon" href="/icons/apple-icon-114x114.png" sizes="114x114"/><link rel="apple-touch-icon" href="/icons/apple-icon-120x120.png" sizes="120x120"/><link rel="apple-touch-icon" href="/icons/apple-icon-144x144.png" sizes="144x144"/><link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png" sizes="152x152"/><link rel="apple-touch-icon" href="/icons/apple-icon-180x180.png" sizes="180x180"/><link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png"/></head><body><noscript>You need to enable JavaScript to run this app!</noscript><div id="___gatsby"><div class="jss1"><main class="jss2"><div style="position:relative;overflow:hidden;width:100%;height:100%"><div style="position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;-webkit-overflow-scrolling:touch;margin-right:0;margin-bottom:0"><article class="jss4"><header class="jss5"><h1 class="jss6">Understanding meta-property - newTarget</h1><h2 class="jss7">Digging deep into newTarget - `new.target` from ECMAScript 2015 (aka ES6)</h2><div class="jss8">Sun, 17 Dec 2017</div></header><div class="jss9 jss10"><p><code class="language-text">new.target</code> is one of newly introduced meta-properties that have made it to ECMAScript/JavaScript. It is also known as <code class="language-text">newTarget</code> in official <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-meta-properties">ES2015 specifications</a>. It lets you detect whether a function (constructor function) was called with <code class="language-text">new</code> keyword or not.</p>
+<hr>
+<p>Following section shall shed some more light on the newly available meta-property.</p>
+<h3>Table of contents</h3>
+<ul>
+<li><a href="#what-is-newtarget">What is new.target</a></li>
+<li><a href="#newtarget-as-per-specification"><code class="language-text">new.target</code> as per specification</a></li>
+<li>
+<p><a href="#primary-points">Primary points</a></p>
+<ul>
+<li><a href="#constructor-functionsmethods">Constructor functions/methods</a></li>
+<li><a href="#problem-with-this">Problem with <code class="language-text">this</code></a></li>
+<li><a href="#typical-solution---using-strict-mode-use-strict">Typical Solution - Using strict mode</a></li>
+<li><a href="#suse-cases">Use Cases</a></li>
+</ul>
+</li>
+<li><a href="#introducing-newtarget">Introducing <code class="language-text">newTarget</code></a></li>
+<li><a href="#is-newtarget-just-a-syntactical-sugar">Is <code class="language-text">newTarget</code> just a syntactical sugar?</a></li>
+<li><a href="#lexical-newtarget-in-arrow-functions-">Lexical new.target in arrow functions <code class="language-text">()=&gt;{}</code></a></li>
+<li><a href="#polyfill">Polyfill</a></li>
+<li><a href="#browser-support">Browser Support</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<hr>
+<h2>What is new.target?</h2>
+<p>The <code class="language-text">new.target</code> property lets you find if, a function or constructor was called using the <code class="language-text">new</code> operator and also helps to find the called constructor. In constructors and functions instantiated with the new operator, <code class="language-text">new.target</code> returns a reference to the constructor or function. In normal function calls, i.e without <code class="language-text">new</code> operator, new.target is <code class="language-text">undefined</code>.</p>
+<h2><code class="language-text">new.target</code> as per specification</h2>
+<p><code class="language-text">newTarget</code> is meta-property and is not a function. Its value is the function, if its called with <code class="language-text">new</code> keyword else it is <code class="language-text">undefined</code>. In official specification, it is referred as ‘Runtime Semantics’ and returns <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-meta-properties">GetNewTarget()</a>.</p>
+<hr>
+<h2>Primary points</h2>
+<p>Before going into usage of <code class="language-text">newTarget</code>, let us consider following few points,</p>
+<h3>Constructor functions/methods</h3>
+<p>You can invoke a constructor function via the <code class="language-text">new</code> operator, then only it becomes a constructor, a factory for objects. By convention, the names of constructors start with uppercase letters.
+A example implementation of Constructor function. We shall use this in further discussion.</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token comment">//constructor function</span>
+<span class="token keyword">function</span> <span class="token function">Animal</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">Animal</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">getType</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Usage</span>
+<span class="token keyword">var</span> cat <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token string">"Cat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>Here we have a ‘Animal’ constructor, which takes ‘type’ of animal as its argument and creates an instance of Animal with that type. Here we have ‘cat’ instance whose type is ‘Cat’ (cat.type).</p>
+<hr>
+<h3>Problem with <code class="language-text">this</code></h3>
+<p>If you forget to call constructor, <code class="language-text">Animal</code>, without the keyword <code class="language-text">new</code>, you will end up referring <code class="language-text">this</code> as parent object (typically, <code class="language-text">window</code> object) and eventually polluting the global scope/environment.</p>
+<p>Consider this snippet,</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token comment">//constructor function</span>
+<span class="token keyword">function</span> <span class="token function">Animal</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">Animal</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">getType</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Usage</span>
+<span class="token keyword">var</span> cat <span class="token operator">=</span> <span class="token function">Animal</span><span class="token punctuation">(</span><span class="token string">"Cat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//no error thrown, no warning!</span>
+
+<span class="token comment">// cat is not any instance.</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cat<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//undefined</span>
+<span class="token comment">// global variable is created, window.type -> 'Cat'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Cat</span></code></pre>
+      </div>
+<p>This is also known as <strong>sloppy mode</strong>. Here, the constructor function always has <code class="language-text">thisArg</code>. We won’t be digging into how <code class="language-text">new</code> operator works but typically, when <code class="language-text">new</code> operator is used, <code class="language-text">this</code> points to a new Object; else it points to global object (window).</p>
+<hr>
+<h3>Typical Solution - Using strict mode, ‘use strict’</h3>
+<p>In strict mode, an exception is thrown when constructor function is not called with <code class="language-text">new</code>.
+Consider,</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token comment">//constructor function</span>
+<span class="token keyword">function</span> <span class="token function">Animal</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token string">"use strict"</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">Animal</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">getType</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Usage</span>
+<span class="token keyword">var</span> cat <span class="token operator">=</span> <span class="token function">Animal</span><span class="token punctuation">(</span><span class="token string">"Cat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//TypeError: Cannot set property 'type' of undefined!</span></code></pre>
+      </div>
+<p>In strict mode, if you do not call constructor function with <code class="language-text">new</code> keyword, <code class="language-text">thisArg</code> is undefined. Which means, one cannot set property ‘type’ for a undefined type. Hence, ‘TypeError’ is thrown in case of strict mode.</p>
+<hr>
+<h3>Use Cases</h3>
+<p>Apart from over coming problem of global scope change, ie, this referring to window object; constructor function needs to find whether it was called with <code class="language-text">new</code> operator for following reasons,</p>
+<ol>
+<li>Force usage of function as a constructor only, which implies raising exception when function is not used as constructor.</li>
+<li>Provide dual functionality for constructor factory. For eg, wrapper objects for primitive, like Number() act as constructor when used with ‘new’ and acts as a function that converts values to primitive type for numbers.</li>
+</ol>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token operator">></span> <span class="token keyword">typeof</span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>
+<span class="token string">'object'</span>
+<span class="token operator">></span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">123</span>
+<span class="token boolean">false</span>
+<span class="token operator">></span> <span class="token function">Number</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>
+<span class="token number">123</span>
+<span class="token operator">></span> <span class="token function">Number</span><span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">)</span>
+<span class="token number">NaN</span></code></pre>
+      </div>
+<p><strong>Case 1 solution:</strong></p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token comment">//Strict constructor function</span>
+<span class="token keyword">function</span> <span class="token function">Animal</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token string">"use strict"</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Animal() must be called with new."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p><strong>Case 2 solution:</strong></p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token comment">//Wrapper Objects</span>
+<span class="token keyword">function</span> <span class="token function">WrapperConstructor</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token string">'use strict'</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment">// WrapperConstructor is called without new</span>
+<span class="token comment">// Act as factory for sub-objects or conversion function</span>
+<span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Else this is defined and used with new operator</span>
+<span class="token comment">// Act as Constructor or factory of WrapperConstructor</span>
+<span class="token operator">...</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<hr>
+<h2>Introducing <code class="language-text">newTarget</code></h2>
+<p><code class="language-text">new.target</code> is an implicit parameter that all functions have. It is to constructor calls what <code class="language-text">this</code> is to method calls. As mentioned, if used with <code class="language-text">new</code> operator, it returns the constructor function else it is undefined.</p>
+<p>Here as typical solutions to use cases that we discussed earlier</p>
+<p><strong>Case 1 solution: (using <code class="language-text">newTarget</code>)</strong></p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Animal</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">new</span><span class="token punctuation">.</span>target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Animal() must be called with new."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p><strong>Case 2 solution:</strong></p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token comment">//Wrapper Objects</span>
+<span class="token keyword">function</span> <span class="token function">WrapperConstructor</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">new</span><span class="token punctuation">.</span>target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+     <span class="token comment">// WrapperConstructor is called without new</span>
+     <span class="token comment">// Act as factory for sub-objects or conversion function</span>
+     <span class="token operator">...</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// Else this is defined and used with new operator</span>
+    <span class="token comment">// Act as Constructor or factory of WrapperConstructor</span>
+    <span class="token operator">...</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<hr>
+<h2>Is <code class="language-text">newTarget</code> just a syntactical sugar?</h2>
+<p>Simply, no because</p>
+<ul>
+<li>Its sole purpose is to retrieve the current value of the [[NewTarget]] value of the current (non-arrow) function environment. It is a value that is set when a function is called (very much like the <code class="language-text">this</code> binding).</li>
+<li>If this Environment Record was created by the [[Construct]] internal method, [[NewTarget]] is the value of the [[Construct]] newTarget parameter. Otherwise, its value is undefined.</li>
+<li>So, for one thing, finally enables us to detect whether a function was called as a constructor or not.</li>
+</ul>
+<p>But that’s not its actual purpose.It is part of the way how ES6 classes are not only syntactic sugar, and how they allow us inheriting from builtin objects.
+When you call a class constructor via new X, the this value is not yet initialized - the object is not yet created when the constructor body is entered. It does get created by the super constructor during the super() call (which is necessary when internal slots are supposed to be created). Still, the instance should inherit from the .prototype of the originally called constructor, and that’s where newTarget comes into the play. It does hold the “outermost” constructor that received the new call during super() invocations. You can follow it all the way down in the spec, but basically it always is the newTarget not the currently executed constructor that does get passed into the new.target.</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Value of newTarget in Parent"</span><span class="token punctuation">,</span> <span class="token keyword">new</span><span class="token punctuation">.</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//undefined</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Is Target Parent?"</span><span class="token punctuation">,</span> <span class="token keyword">new</span><span class="token punctuation">.</span>target <span class="token operator">===</span> Parent<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Value of newTarget in Child"</span><span class="token punctuation">,</span> <span class="token keyword">new</span><span class="token punctuation">.</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//function Child</span>
+  <span class="token function">Parent</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Is Target Child?"</span><span class="token punctuation">,</span> <span class="token keyword">new</span><span class="token punctuation">.</span>target <span class="token operator">===</span> Child<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>Parent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Child</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Child<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<ul>
+<li>Consider the case for ES6 Classes</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// implicit (from the `super` call)</span>
+    <span class="token comment">// new.target = Child;</span>
+    <span class="token comment">// implicit (because `Parent` doesn't extend anything):</span>
+    <span class="token comment">// this = Object.create(new.target.prototype);</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span><span class="token punctuation">.</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Child!</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// implicit (from the `new` call):</span>
+    <span class="token comment">// new.target = Child</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>Following extract for classes would explain <code class="language-text">newTarget</code> in classes</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span><span class="token punctuation">.</span>target<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">extends</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// logs "A"</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// logs "B"</span>
+
+<span class="token keyword">class</span> <span class="token class-name">C</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span><span class="token punctuation">.</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">D</span> <span class="token keyword">extends</span> <span class="token class-name">C</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">C</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// logs class C{constructor(){console.log(new.target);}}</span>
+<span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">D</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// logs class D extends C{constructor(){super();}}</span></code></pre>
+      </div>
+<p>Thus from the above example of class C and D, it seems that new.target points to the class Definition of class which is initialized. For example, when D was initialized using new, the class definition of D was printed and similarly in case of c, class C was printed.</p>
+<hr>
+<h2>Lexical new.target in arrow functions <code class="language-text">()=&gt;{}</code></h2>
+<p><code class="language-text">new.target</code> is lexical in arrow functions, just like <code class="language-text">arguments</code> and <code class="language-text">this</code> are lexical, i.e., value of <code class="language-text">new.target</code> is taken from surrounding environment.</p>
+<hr>
+<h2>Polyfill</h2>
+<p>This is not polyfill-able property, as it is token/expression and uses property from callee. Also, Polyfill-ing doesn’t makes any sense here because it not a function to be called. Even if treated as property, <code class="language-text">new</code> is a keyword/operator and not a object that could hold <code class="language-text">target</code> as its property.</p>
+<hr>
+<h2>Browser Support</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Chrome</th>
+<th align="left">Edge</th>
+<th align="left">Firefox</th>
+<th>Internet Explorer</th>
+<th>Opera</th>
+<th>Safari</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">46</td>
+<td align="left">Yes</td>
+<td align="left">41</td>
+<td>NO</td>
+<td>Yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>References</h2>
+<ul>
+<li><a href="http://www.ecma-international.org/ecma-262/6.0">ES2015 specifications</a></li>
+<li><a href="https://stackoverflow.com/questions/32450516/what-is-new-target">StackOverflow.com article</a></li>
+<li><a href="http://2ality.com/2015/02/es6-classes-final.html">ExploringJS - 2ality article</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target">MDN web-docs</a></li>
+</ul>
+<p>For the interested species, refer <a href="https://esdiscuss.org/notes/2015-01-27">meeting notes from ES discussion</a> on <code class="language-text">newTarget</code></p>
+<hr></div><footer class="jss11"><div>Loading...</div><div id="post-comments" class="jss12"><div><div class="fb-comments" data-colorscheme="light" data-href="https://theanubhav.com2017/12/17/understanding-newTarget/" data-width="100%" data-skin="light"></div></div></div></footer></article><footer class="jss13"><div class="jss14"><hr>
+<ul>
+<li><a href="https://about.theanubhav.com">Anubhav Srivastava</a></li>
+</ul></div></footer></div><div style="position:absolute;height:6px;transition:opacity 200ms;opacity:0;display:none;right:2px;bottom:2px;left:2px;border-radius:3px"><div style="position:relative;display:block;height:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div></div><div style="position:absolute;width:6px;transition:opacity 200ms;opacity:0;display:none;right:2px;bottom:2px;top:2px;border-radius:3px"><div style="position:relative;display:block;width:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div></div></div></main><nav class="jss15 is-aside open "><div class="jss16"><div style="position:relative;overflow:hidden;width:100%;height:100%"><div style="position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;-webkit-overflow-scrolling:touch;margin-right:0;margin-bottom:0"><div class="jss17"><header></header><ul class="jss18"><li class="jss23 TechTalk" style="display:block"><a class="jss24" href="/2017/12/17/understanding-newTarget/2019/04/07/coping-with-technical-debts/"><div class="jss25 pointer"><div style="height:60px" class="lazyload-placeholder"></div></div><div class="jss26"><h1>Coping up with technical debts as a developer!</h1><h2>Understanding developer&#x27;s take on technical debt and things around it.</h2></div></a></li><li class="jss23 TechTalk" style="display:block"><a class="jss24" href="/2017/12/17/understanding-newTarget/2019/03/10/dont-delay-technical-debts/"><div class="jss25 pointer"><div style="height:60px" class="lazyload-placeholder"></div></div><div class="jss26"><h1>Don&#x27;t delay your technical debts!</h1><h2>// Todo, the foundation of your future technical limitation and frustration that you planned today.</h2></div></a></li><li class="jss23 JavaScript" style="display:block"><a class="jss24" href="/2017/12/17/understanding-newTarget/2019/02/03/js-currying-in-interview/"><div class="jss25 pointer"><div style="height:60px" class="lazyload-placeholder"></div></div><div class="jss26"><h1>Currying in JS: Answering the traditional question, Add(2)(3), which gives sum of both numbers.</h1><h2>Understanding concept of currying and in depth analysis of most frequent interview questions around it</h2></div></a></li><li class="jss23 JavaScript" style="display:block"><a class="jss24" href="/2017/12/17/understanding-newTarget/2018/11/07/understanding-primitive-and-getter-setters/"><div class="jss25 pointer"><div style="height:60px" class="lazyload-placeholder"></div></div><div class="jss26"><h1>Will (a===1 &amp;&amp; a===2 &amp;&amp; a===3)(strict comparison) ever be true (in JavaScript)</h1><h2>Extension to traditional JavaScript problem (a==1 &amp;&amp; a==2 &amp;&amp; a==3) (loose equality) and its solution</h2></div></a></li><li class="jss23 awesome-list" style="display:block"><a class="jss24" href="/2017/12/17/understanding-newTarget/2018/11/27/awesome-ui-component-list/"><div class="jss25 pointer"><div style="height:60px" class="lazyload-placeholder"></div></div><div class="jss26"><h1>Awesome list (of github) for UI Component Libraries based on UI Toolkits</h1><h2>Curated list of things for UI Component of React, Angular, Ember, Vue and Mithril JS for Open source community</h2></div></a></li><li class="jss23 JavaScript" style="display:block"><a class="jss24" href="/2017/12/17/understanding-newTarget/2017/12/17/understanding-newTarget/"><div class="jss25 pointer"><div style="height:60px" class="lazyload-placeholder"></div></div><div class="jss26"><h1>Understanding meta-property - newTarget</h1><h2>Digging deep into newTarget - `new.target` from ECMAScript 2015 (aka ES6)</h2></div></a></li></ul></div></div><div style="position:absolute;height:6px;transition:opacity 200ms;opacity:0;display:none;right:2px;bottom:2px;left:2px;border-radius:3px"><div style="position:relative;display:block;height:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div></div><div style="position:absolute;width:6px;transition:opacity 200ms;opacity:0;display:none;right:2px;bottom:2px;top:2px;border-radius:3px"><div style="position:relative;display:block;width:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div></div></div></div></nav><div class="jss27"><div class="jss28"><button tabindex="0" class="jss36 jss30 jss29" type="button" aria-label="Back to list" title="Back to the list"><span class="jss35"><svg class="jss39" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></g></svg></span><span class="jss46"></span></button></div><div class="jss28"><nav class="jss53"><div><div><button tabindex="0" class="jss36 jss30 jss54" type="button" aria-label="Increase font size" aria-haspopup="true" title="Change font size"><span class="jss35"><svg class="jss39" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M9 4v3h5v12h3V7h5V4H9zm-6 8h3v7h3v-7h3V9H3v3z"></path></g></svg></span><span class="jss46"></span></button></div><div class="jss55" style="position:absolute;pointer-events:none;opacity:0"><div class="jss56 jss60 jss57" style="opacity:0;transform:scale(0.75, 0.5625);transform-origin:0 0 0" id="font-menu-list"><ul class="jss83 jss84" role="menu"><li tabindex="-1" class="jss36 jss89 jss92 jss96 jss97 jss87" role="menuitem">150%<span class="jss46"></span></li><li tabindex="-1" class="jss36 jss89 jss92 jss96 jss97 jss87" role="menuitem">125%<span class="jss46"></span></li><li tabindex="-1" class="jss36 jss89 jss92 jss96 jss97 jss87" role="menuitem">100%<span class="jss46"></span></li></ul></div></div></div></nav><button tabindex="0" class="jss36 jss30" type="button" aria-label="Back to top" title="Scroll to top"><span class="jss35"><svg class="jss39 jss29" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></g></svg></span><span class="jss46"></span></button></div></div><aside class="jss99"><a class="jss101" href="/"><div class="jss103 jss102"><img alt="Anubhav Srivastava" src="/static/avatar.465b0621.jpg" class="jss105"/></div></a><h3 class="jss100">Anubhav Srivastava<small>Personal blog</small></h3><nav class="jss106"><div><div><button tabindex="0" class="jss36 jss30 jss107" type="button" aria-label="More" aria-haspopup="true"><span class="jss35"><svg class="jss39" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></g></svg></span><span class="jss46"></span></button></div><div class="jss108" style="position:absolute;pointer-events:none;opacity:0"><div class="jss56 jss60 jss57" style="opacity:0;transform:scale(0.75, 0.5625);transform-origin:0 0 0" id="menu-list"><ul class="jss83 jss84" role="menu"><li tabindex="-1" class="jss36 jss89 jss92 jss96 jss97 jss87" role="menuitem">Home<span class="jss46"></span></li></ul></div></div></div></nav></aside></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"0":"0-eda92161a74bd28aad5d.js","1":"1-cd74abbb730f0393fc82.js","231608221292675":"app-f73c7d77683a26330045.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","198517197184460":"component---src-templates-post-template-js-1d8e36c3fe933e1b7880.js","235131596041995":"component---src-templates-page-template-js-e0434750f574a9276ef2.js","70144966829960":"component---src-pages-contact-js-b73d1345746e733c7a64.js","35783957827783":"component---src-pages-index-js-5c8c37505e3eccd973b3.js","142807904292071":"component---src-pages-search-js-2208c21b4c8be94cf383.js","60335399758886":"path----4728ff22d423ca37257a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","112831825391847":"path---2017-12-17-understanding-new-target-08b3079c7075aae8ce55.js","117174674033172":"path---2018-11-27-awesome-ui-component-list-9af0b7fc4fdf9d438622.js","131735163015845":"path---2019-02-03-js-currying-in-interview-2ef7890de3f572c952f6.js","246473834723019":"path---2018-11-07-understanding-primitive-and-getter-setters-9fc6f215b90a5c35eecc.js","180014063654642":"path---2019-03-10-dont-delay-technical-debts-df00dddf785a06dc8e0b.js","213929195380775":"path---2019-04-07-coping-with-technical-debts-c3056d6a14a7421e34f6.js","170786371021445":"path---success-08815c3c3c90250b8a28.js","273950069227526":"path---about-1d0b4baef5379e31a089.js","230064834116715":"path---starters-618afde4afe37714eb85.js","184662623972074":"path---contact-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-a0e39f21c11f6a62c5ab.js","254572558124955":"path---search-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-5cad8864707b19adb258.js"}/*]]>*/</script><script>
+            
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto');
+      }
+      </script><script>
+        WebFontConfig = {
+          google: {
+            families: ["Open Sans:300,400,600"]
+          }
+        };
+
+        (function(d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);</script><script>/*<![CDATA[*/["/commons-91efb3dbe8d9556dbead.js","/app-f73c7d77683a26330045.js","/path---2017-12-17-understanding-new-target-08b3079c7075aae8ce55.js","/component---src-templates-post-template-js-1d8e36c3fe933e1b7880.js","/component---src-layouts-index-js-5cad8864707b19adb258.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
