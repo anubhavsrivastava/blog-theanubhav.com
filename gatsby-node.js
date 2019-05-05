@@ -11,12 +11,12 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` });
     let slugPath = "";
-    let separatorIndex = 0;
+    const separatorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0;
+    const shortSlugStart = separatorIndex ? separatorIndex + 2 : 0;
+
     if (node.frontmatter && node.frontmatter.slug) {
       slugPath = node.frontmatter.slug;
     } else {
-      separatorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0;
-      const shortSlugStart = separatorIndex ? separatorIndex + 2 : 0;
       slugPath = `${separatorIndex ? "/" : ""}${slug.substring(shortSlugStart)}`;
     }
 
