@@ -53,16 +53,18 @@ There is also a [reddit](https://www.reddit.com/r/javascript/comments/7r0i00/can
 
 #### Problem `(a==1 && a==2 && a==3)`
 
-    Can (a==1 && a==2 && a==3) ever evaluate to true?
+Can (a==1 && a==2 && a==3) ever evaluate to true?
 
 Yes, and to make it true one can do this,
 
-    const a = { value : 0 };
-    a.valueOf = function() {
-        return this.value += 1;
-    };
+```javascript
+const a = { value: 0 };
+a.valueOf = function() {
+  return (this.value += 1);
+};
 
-    console.log(a==1 && a==2 && a==3); //true
+console.log(a == 1 && a == 2 && a == 3); //true
+```
 
 The purpose of a question like this in interview, isn't to know the answer to the brain-teaser, so much as to get a feel for how the interviewee thinks through problems, and whether they have awareness of the kinds of features and oddities of JS that can make the `==` comparison behave strangely.
 
@@ -77,7 +79,10 @@ Question here is how does JavaScript coerce this values?
 
 Based on values of comparison, type coercion occurs, lets consider a internal function to convert so,
 
+```javascript
+
     ToPrimitive(input, PreferredType?)
+```
 
 The optional parameter PreferredType indicates the final type of the conversion: it is either Number or String, depending on whether the result of `ToPrimitive()` will be converted to a number or a string.
 
@@ -102,18 +107,20 @@ Similar coercion came into effect for `a==2` and `a==3` thus incrementing it for
 
 ### Problem `(a===1 && a===2 && a===3)` (strict comparison)
 
-    Can (a===1 && a===2 && a===3) ever evaluate to true?
+Can (a===1 && a===2 && a===3) ever evaluate to true?
 
 Yes, below code would make this true,
 
-    var value = 0; //window.value
-    Object.defineProperty(window, 'a', {
-        get: function() {
-            return this.value += 1;
-        }
-    });
+```javascript
+var value = 0; //window.value
+Object.defineProperty(window, "a", {
+  get: function() {
+    return (this.value += 1);
+  }
+});
 
-    console.log(a===1 && a===2 && a===3) /true
+console.log(a === 1 && a === 2 && a === 3) / true;
+```
 
 #### Explanation
 
@@ -137,11 +144,10 @@ A _property descriptor_ can be of two types: data descriptor, or accessor descri
     - `writable`
 
     Sample:
-
-        {
-            value: 5,
-            writable: true
-        }
+    {
+    value: 5,
+    writable: true
+    }
 
 2.  Accessor descriptor
 
@@ -155,33 +161,38 @@ A _property descriptor_ can be of two types: data descriptor, or accessor descri
     - `enumerable`
 
     Sample:
-
-        {
-            get: function () { return 5; },
-            enumerable: true
-        }
+    {
+    get: function () { return 5; },
+    enumerable: true
+    }
 
 Accessor Example from Mozilla pages,
 
-        // Example of an object property added
-        // with defineProperty with an accessor property descriptor
+```javascript
+// Example of an object property added
+// with defineProperty with an accessor property descriptor
 
-        var bValue = 38;
+var bValue = 38;
 
-        Object.defineProperty(o, 'b', {
-            // Using shorthand method names (ES2015 feature).
-            // This is equivalent to:
-            // get: function() { return bValue; },
-            // set: function(newValue) { bValue = newValue; },
-            get() { return bValue; },
-            set(newValue) { bValue = newValue; },
-            enumerable: true,
-            configurable: true
-        });
-        o.b; // 38
-        // 'b' property exists in the o object and its value is 38
-        // The value of o.b is now always identical to bValue,
-        // unless o.b is redefined
+Object.defineProperty(o, "b", {
+  // Using shorthand method names (ES2015 feature).
+  // This is equivalent to:
+  // get: function() { return bValue; },
+  // set: function(newValue) { bValue = newValue; },
+  get() {
+    return bValue;
+  },
+  set(newValue) {
+    bValue = newValue;
+  },
+  enumerable: true,
+  configurable: true
+});
+o.b; // 38
+// 'b' property exists in the o object and its value is 38
+// The value of o.b is now always identical to bValue,
+// unless o.b is redefined
+```
 
 A property on a object be defined by using `Object.defineProperty` as mentioned in the solution. You can dig into syntax and definition [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) .
 Interestingly, `get` and `set` are accessors which can be called via dot(.) operator, i.e if object `a` has getter property called `b` then it is called just like any other value with dot notation, viz, `a.b`.

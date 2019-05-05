@@ -28,7 +28,7 @@ draft: false
 ---
 
 <div align="center">
-	<img  src="/img/avatars/avatar-awesome.png" alt="Awesome" />
+	<img  src="avatars/avatar-awesome.png" alt="Awesome" />
 </div>
 
 # What is `awesome lists`?
