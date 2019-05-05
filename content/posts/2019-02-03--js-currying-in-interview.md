@@ -53,15 +53,19 @@ Before moving on, please try this problem yourself, if you have encountered it f
 
 Solution,
 
-    function add(x){
-        return function (y){
-            return x+y;
-        }
-    }
+```javascript
+function add(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+```
 
 Which can also be implemented in ES6 using arrow functions as,
 
-    const add = x => y => x+y;
+```javascript
+const add = x => y => x + y;
+```
 
 This problem is nothing but concept of `currying` in JS.
 
@@ -85,29 +89,37 @@ Hmm, we know how to handle the summation and returning function (along with clos
 We have already seen how `ToPrimitive` operation is handled by JS engine in this [blog](/2018/11/07/understanding-primitive-and-getter-setters/). Taking into consideration of this fact, if we return an object(or function) whose `valueOf` property returns the resultant calculated so far, we would be able to differentiate between returning a function for further summation and result of summation so far.
 Let's see,
 
-    function add(x){
-        let sum = x;
-        function resultFn(y){
-            sum += y;
-            return resultFn;
-        }
-        resultFn.valueOf = function(){
-                return sum;
-            };
-        return resultFn;
-    }
+```javascript
+function add(x) {
+  let sum = x;
+  function resultFn(y) {
+    sum += y;
+    return resultFn;
+  }
+  resultFn.valueOf = function() {
+    return sum;
+  };
+  return resultFn;
+}
+```
 
 The following execution would work,
+
+```javascript
 
     > 5 + add(2)(3) //output: 10
     > console.log(add(2)(3)(4)==9) //output: true
     > add(3)(4)(5).valueOf() //output: 12
+```
 
 On the other hand, this won't work or would unexpectedly at few places, for instance
+
+```javascript
 
     > add(3)(4)(5) //return function
     > console.log(add(3)(4)(5)) // output: function
     > console.log(add(3)(4)(5)===12)// output: false
+```
 
 This behavior is due to the fact that `valueOf` property would be called by JS engine when it needs to convert the result of add(2)(3)(4) to primitive type. All the above statements that gave correct result are due to the fact that JS engine tried to convert the result into primitive value.
 
@@ -116,21 +128,26 @@ This behavior is due to the fact that `valueOf` property would be called by JS e
 Another approach could be, we follow a convention, that consumer of the function should explicitly call a property in result to get the summation. This solution is very much similar to solution using `valueOf`, but no implicit conversion takes place.
 Something like this,
 
-    function add(x){
-        let sum = x;
-        return function resultFn(y){
-            sum += y;
-            resultFn.result = sum;
-            return resultFn;
-        }
-    }
+```javascript
+function add(x) {
+  let sum = x;
+  return function resultFn(y) {
+    sum += y;
+    resultFn.result = sum;
+    return resultFn;
+  };
+}
+```
 
 Consumption would be,
+
+```javascript
 
     > add(3)(4)(5).result //output: 12
     > var t = add(3)(4);
     > t.result //output: 7
     > t(5).result //output: 12
+```
 
 If something of this sort has to be implemented, it should be via module/class and just not simple function to emulate the behavior.
 
@@ -138,31 +155,39 @@ If something of this sort has to be implemented, it should be via module/class a
 
 One could also design the function to return resultant summation when the function is called with no arguments. If argument is passed, it will keep adding those numbers to previous result.
 
-    function add(x){
-        let sum = x;
-        return function resultFn(y){
-            if(arguments.length){ //not relying on falsy value
-                sum += y;
-                return resultFn;
-            }
-            return sum;
-        }
+```javascript
+function add(x) {
+  let sum = x;
+  return function resultFn(y) {
+    if (arguments.length) {
+      //not relying on falsy value
+      sum += y;
+      return resultFn;
     }
+    return sum;
+  };
+}
+```
 
 This could be used in following manner,
+
+```javascript
 
     > add(2)(3)() //output: 5
     > var t = add(3)(4)(5)
     > t() //output: 12
+```
 
 #### `add(2)(3)(4) and add(2,3,4)` usage in same function.
 
 This is another variance, where in same function should satisfy both use case `add(2)(3)(4)` and `add(2,3,4)` or any combination. So, a single function should satisfy following cases,
 
-- add(2)(3)(4)
-- add(2,3,4)
-- add(2)(3,4)
-- add(2,3)(4)
+```javascript
+    > add(2)(3)(4)
+    > add(2, 3, 4)
+    > add(2)(3, 4)
+    > add(2, 3)(4)
+```
 
 For this type, let us consider there would be fixed 'n' number of arguments (in our case, n=3). If we need to implement this with variable number of arguments we could club solution of these problem with solution of above discussed problem.
 The trick here is to keep track of 'n' arguments and as soon as we have sufficient number of arguments, we return the sum.
@@ -171,35 +196,45 @@ The trick here is to keep track of 'n' arguments and as soon as we have sufficie
 
 Following code keeps a count of total arguments passed and if it reaches 3, it gives the resultant sum
 
-    function add(){
-        let args = [].slice.apply(arguments);
-        function resultFn(){
-            args = args.concat([].slice.apply(arguments));
-            if(args.length>=3){
-                return args.slice(0,3).reduce(function(acc,next){ return acc+next},0); //will only sum first 3 arguments
-            }
-            return resultFn;
-        }
-        return resultFn();
+```javascript
+function add() {
+  let args = [].slice.apply(arguments);
+  function resultFn() {
+    args = args.concat([].slice.apply(arguments));
+    if (args.length >= 3) {
+      return args.slice(0, 3).reduce(function(acc, next) {
+        return acc + next;
+      }, 0); //will only sum first 3 arguments
     }
+    return resultFn;
+  }
+  return resultFn();
+}
+```
 
 Sample usage,
 
+```javascript
     > add(2)(3)(4) //output: 9
     > add(2,3,4) //output: 9
     > add(2)(3,4) //output: 9
     > add(2,3)(4) //output: 9
+```
 
 ##### 2. Generic solution for fixed argument function
 
 The approach here is to create a higher order function, which would take a function and number of arguments that are must for this function - say 3 in our case for add(2,3,4). This function would keep track of arguments unless the total collected arguments is same as expected no of arguments for the passed function.
 
-    function fixCurry(fn, totalArgs){
-        totalArgs = totalArgs ||fn.length
-            return function recursor(){
-                return arguments.length<totalArgs?recursor.bind(this, ...arguments): fn.call(this, ...arguments);
-            }
-    }
+```javascript
+function fixCurry(fn, totalArgs) {
+  totalArgs = totalArgs || fn.length;
+  return function recursor() {
+    return arguments.length < totalArgs
+      ? recursor.bind(this, ...arguments)
+      : fn.call(this, ...arguments);
+  };
+}
+```
 
 The above function takes in a function - `fn`, and optionally `totalArgs` that are mandatory before calling `fn`. If `totalArgs` aren't passed it will rely on function signature and use the property `fn.length` which is number of parameter a function has been defined with.
 `totalArgs` may be used for function - `fn` whose implementation itself relies on `arguments` and no parameters are defined in its signature.
@@ -207,19 +242,25 @@ The above function takes in a function - `fn`, and optionally `totalArgs` that a
 
 Lets see sample usage,
 
+```javascript
+
     > var add = fixCurry((a,b,c)=>a+b+c); //fn = summation function
     > console.log(add(1,2, 3))  // output: 6
     > console.log(add(1)(2,3)) // output: 6
     > console.log(add(1)(3)(2)) // output: 6
     > console.log(add(1,2)(3)) // output: 6
+```
 
 Same would work for multiply (or any other curried function),
+
+```javascript
 
     > var multiply = fixCurry((a,b,c)=>a*b*c); //fn = multiplication function
     > console.log(multiply(1,2, 3))  // output: 6
     > console.log(multiply(1)(2,3)) // output: 6
     > console.log(multiply(1)(3)(2)) // output: 6
     > console.log(multiply(1,2)(3)) // output: 6
+```
 
 This `fixCurry` can also be used for currying any function with fixed parameter.
 
