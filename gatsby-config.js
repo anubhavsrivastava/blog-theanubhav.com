@@ -2,7 +2,7 @@ require("dotenv").config();
 const config = require("./content/meta/config");
 
 const query = `{
-  allMarkdownRemark(filter: { id: { regex: "//posts|pages//" } }) {
+  allMarkdownRemark(filter: { id: { regex: "//posts|pages//" }, frontmatter: {draft: { ne: true } }}) {
     edges {
       node {
         objectID: id
@@ -16,6 +16,7 @@ const query = `{
           title
           subTitle
           slug
+          draft
         }
       }
     }
@@ -181,6 +182,7 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
+                console.log(edge.node.fields.draft);
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
@@ -194,7 +196,7 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [fields___prefix] },
-                  filter: { id: { regex: "//posts//" } }
+                  filter: { id: { regex: "//posts//" }, frontmatter: {draft: { ne: true }} }
                 ) {
                   edges {
                     node {
@@ -206,6 +208,7 @@ module.exports = {
                       }
                       frontmatter {
                         title
+                        draft
                       }
                     }
                   }

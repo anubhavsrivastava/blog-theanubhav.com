@@ -124,7 +124,7 @@ export default connect(
 export const guery = graphql`
   query LayoutQuery {
     posts: allMarkdownRemark(
-      filter: { id: { regex: "//posts//" } }
+      filter: { id: { regex: "//posts//" }, frontmatter: {draft: { ne: true } } }
       sort: { fields: [fields___prefix], order: DESC }
     ) {
       edges {
@@ -138,6 +138,7 @@ export const guery = graphql`
             title
             subTitle
             category
+            draft
             cover {
               children {
                 ... on ImageSharp {

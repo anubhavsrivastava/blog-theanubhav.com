@@ -43,13 +43,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(
         `
           {
-            allMarkdownRemark(filter: { id: { regex: "//posts|pages//" } }, limit: 1000) {
+            allMarkdownRemark(
+              filter: { id: { regex: "//posts|pages//" }, frontmatter: { draft: { ne: true } } }
+              limit: 1000
+            ) {
               edges {
                 node {
                   id
                   fields {
                     slug
                     prefix
+                  }
+                  frontmatter {
+                    draft
                   }
                 }
               }
