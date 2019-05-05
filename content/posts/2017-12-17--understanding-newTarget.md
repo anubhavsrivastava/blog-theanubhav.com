@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Understanding meta-property - newTarget
-subtitle: Digging deep into newTarget - `new.target` from ECMAScript 2015 (aka ES6)
-cover: /img/avatars/avatar-js.png
+subTitle: Digging deep into newTarget - `new.target` from ECMAScript 2015 (aka ES6)
+cover: avatars/avatar-js.png
+category: JavaScript
 categories: [JavaScript]
-slug: "/path/sluggish"
-draft: true
+slug: "2017/12/17/understanding-newTarget/"
+draft: false
 tag: [ES2015, ES6, ECMASCRIPT2015, JavaScript]
 ---
 
@@ -52,18 +53,18 @@ Before going into usage of `newTarget`, let us consider following few points,
 You can invoke a constructor function via the `new` operator, then only it becomes a constructor, a factory for objects. By convention, the names of constructors start with uppercase letters.
 A example implementation of Constructor function. We shall use this in further discussion.
 
-{% highlight javascript linenos %}
+```javascript
 //constructor function
 function Animal(type) {
-this.type = type;  
+  this.type = type;
 }
-Animal.prototype.getType = function(){
-return this.type;
-}
+Animal.prototype.getType = function() {
+  return this.type;
+};
 
 //Usage
-var cat = new Animal('Cat');
-{% endhighlight %}
+var cat = new Animal("Cat");
+```
 
 Here we have a 'Animal' constructor, which takes 'type' of animal as its argument and creates an instance of Animal with that type. Here we have 'cat' instance whose type is 'Cat' (cat.type).
 
@@ -74,23 +75,25 @@ Here we have a 'Animal' constructor, which takes 'type' of animal as its argumen
 If you forget to call constructor, `Animal`, without the keyword `new`, you will end up referring `this` as parent object (typically, `window` object) and eventually polluting the global scope/environment.
 
 Consider this snippet,
-{% highlight javascript linenos %}
+
+```javascript
 //constructor function
 function Animal(type) {
-this.type = type;  
+  this.type = type;
 }
-Animal.prototype.getType = function(){
-return this.type;
-}
+Animal.prototype.getType = function() {
+  return this.type;
+};
 
 //Usage
-var cat = Animal('Cat'); //no error thrown, no warning!
+var cat = Animal("Cat"); //no error thrown, no warning!
 
 // cat is not any instance.
 console.log(cat); //undefined
 // global variable is created, window.type -> 'Cat'
 console.log(type); // Cat
-{% endhighlight %}
+```
+
 This is also known as **sloppy mode**. Here, the constructor function always has `thisArg`. We won't be digging into how `new` operator works but typically, when `new` operator is used, `this` points to a new Object; else it points to global object (window).
 
 ---
@@ -99,20 +102,20 @@ This is also known as **sloppy mode**. Here, the constructor function always has
 
 In strict mode, an exception is thrown when constructor function is not called with `new`.
 Consider,
-{% highlight javascript linenos %}
+
+```javascript
 //constructor function
 function Animal(type) {
-'use strict'
-this.type = type;  
+  "use strict";
+  this.type = type;
 }
-Animal.prototype.getType = function(){
-return this.type;
-}
+Animal.prototype.getType = function() {
+  return this.type;
+};
 
 //Usage
-var cat = Animal('Cat'); //TypeError: Cannot set property 'type' of undefined!
-
-{% endhighlight %}
+var cat = Animal("Cat"); //TypeError: Cannot set property 'type' of undefined!
+```
 
 In strict mode, if you do not call constructor function with `new` keyword, `thisArg` is undefined. Which means, one cannot set property 'type' for a undefined type. Hence, 'TypeError' is thrown in case of strict mode.
 
@@ -125,7 +128,7 @@ Apart from over coming problem of global scope change, ie, this referring to win
 1. Force usage of function as a constructor only, which implies raising exception when function is not used as constructor.
 2. Provide dual functionality for constructor factory. For eg, wrapper objects for primitive, like Number() act as constructor when used with 'new' and acts as a function that converts values to primitive type for numbers.
 
-```javaScript
+```javascript
 > typeof new Number(123)
 'object'
 > new Number(123) === 123
@@ -137,19 +140,21 @@ NaN
 ```
 
 **Case 1 solution:**
-{% highlight javascript linenos %}
+
+```javascript
 //Strict constructor function
 function Animal(type) {
-'use strict'
-if(this === undefined){
-throw new Error('Animal() must be called with new.');
+  "use strict";
+  if (this === undefined) {
+    throw new Error("Animal() must be called with new.");
+  }
+  this.type = type;
 }
-this.type = type;  
-}
-{% endhighlight %}
+```
 
 **Case 2 solution:**
-{% highlight javascript linenos %}
+
+```javascript
 //Wrapper Objects
 function WrapperConstructor(type) {
 'use strict'
@@ -160,9 +165,9 @@ if(this === undefined){
 }
 // Else this is defined and used with new operator
 // Act as Constructor or factory of WrapperConstructor
-...  
+...
 }
-{% endhighlight %}
+```
 
 ---
 
@@ -173,16 +178,19 @@ if(this === undefined){
 Here as typical solutions to use cases that we discussed earlier
 
 **Case 1 solution: (using `newTarget`)**
-{% highlight javascript linenos %}
+
+```javascript
 function Animal(type) {
-if(!new.target){
-throw new Error('Animal() must be called with new.');
+  if (!new.target) {
+    throw new Error("Animal() must be called with new.");
+  }
+  this.type = type;
 }
-this.type = type;  
-}
-{% endhighlight %}
+```
+
 **Case 2 solution:**
-{% highlight javascript linenos %}
+
+```javascript
 //Wrapper Objects
 function WrapperConstructor(type) {
 
@@ -196,7 +204,7 @@ function WrapperConstructor(type) {
     ...
 
 }
-{% endhighlight %}
+```
 
 ---
 
@@ -211,67 +219,80 @@ Simply, no because
 But that's not its actual purpose.It is part of the way how ES6 classes are not only syntactic sugar, and how they allow us inheriting from builtin objects.
 When you call a class constructor via new X, the this value is not yet initialized - the object is not yet created when the constructor body is entered. It does get created by the super constructor during the super() call (which is necessary when internal slots are supposed to be created). Still, the instance should inherit from the .prototype of the originally called constructor, and that's where newTarget comes into the play. It does hold the "outermost" constructor that received the new call during super() invocations. You can follow it all the way down in the spec, but basically it always is the newTarget not the currently executed constructor that does get passed into the new.target.
 
-{% highlight javascript linenos %}
-function Parent(){
-console.log('Value of newTarget in Parent', new.target); //undefined
-console.log('Is Target Parent?', new.target===Parent); //false
+```javascript
+function Parent() {
+  console.log("Value of newTarget in Parent", new.target); //undefined
+  console.log("Is Target Parent?", new.target === Parent); //false
 }
 
-function Child(){
-console.log('Value of newTarget in Child', new.target); //function Child
-Parent.apply(this,arguments);
-console.log('Is Target Child?', new.target===Child);//true
+function Child() {
+  console.log("Value of newTarget in Child", new.target); //function Child
+  Parent.apply(this, arguments);
+  console.log("Is Target Child?", new.target === Child); //true
 }
 
 Child.prototype = Object.create(Parent);
 Child.prototype.constructor = Child;
 
 var child = new Child();
-{% endhighlight %}
+```
 
 - Consider the case for ES6 Classes
-  {% highlight javascript linenos %}
 
+```javascript
 class Parent {
-constructor() {
-// implicit (from the `super` call)
-// new.target = Child;
-// implicit (because `Parent` doesn't extend anything):
-// this = Object.create(new.target.prototype);
-console.log(new.target) // Child!
-}
+  constructor() {
+    // implicit (from the `super` call)
+    // new.target = Child;
+    // implicit (because `Parent` doesn't extend anything):
+    // this = Object.create(new.target.prototype);
+    console.log(new.target); // Child!
+  }
 }
 class Child extends Parent {
-constructor() {
-// implicit (from the `new` call):
-// new.target = Child
-super();
-console.log(this);
-}
+  constructor() {
+    // implicit (from the `new` call):
+    // new.target = Child
+    super();
+    console.log(this);
+  }
 }
 let child = new Child();
-{% endhighlight %}
+```
 
 Following extract for classes would explain `newTarget` in classes
 
-{% highlight javascript linenos %}
+```javascript
 class A {
-constructor() {
-console.log(new.target.name);
-}
+  constructor() {
+    console.log(new.target.name);
+  }
 }
 
-class B extends A { constructor() { super(); } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
 var a = new A(); // logs "A"
 var b = new B(); // logs "B"
 
-class C { constructor() { console.log(new.target); } }
-class D extends C { constructor() { super(); } }
+class C {
+  constructor() {
+    console.log(new.target);
+  }
+}
+class D extends C {
+  constructor() {
+    super();
+  }
+}
 
 var c = new C(); // logs class C{constructor(){console.log(new.target);}}
 var d = new D(); // logs class D extends C{constructor(){super();}}
-{% endhighlight %}
+```
+
 Thus from the above example of class C and D, it seems that new.target points to the class Definition of class which is initialized. For example, when D was initialized using new, the class definition of D was printed and similarly in case of c, class C was printed.
 
 ---
