@@ -10,17 +10,25 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` });
-    const separtorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0;
-    const shortSlugStart = separtorIndex ? separtorIndex + 2 : 0;
+    let slugPath = "";
+    let separatorIndex = 0;
+    if (node.frontmatter && node.frontmatter.slug) {
+      slugPath = node.frontmatter.slug;
+    } else {
+      separatorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0;
+      const shortSlugStart = separatorIndex ? separatorIndex + 2 : 0;
+      slugPath = `${separatorIndex ? "/" : ""}${slug.substring(shortSlugStart)}`;
+    }
+
     createNodeField({
       node,
       name: `slug`,
-      value: `${separtorIndex ? "/" : ""}${slug.substring(shortSlugStart)}`
+      value: slugPath
     });
     createNodeField({
       node,
       name: `prefix`,
-      value: separtorIndex ? slug.substring(1, separtorIndex) : ""
+      value: separatorIndex ? slug.substring(1, separatorIndex) : ""
     });
   }
 };
@@ -50,7 +58,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors);
           reject(result.errors);
         }
 
@@ -58,7 +65,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         _.each(result.data.allMarkdownRemark.edges, edge => {
           const slug = edge.node.fields.slug;
           const isPost = /posts/.test(edge.node.id);
-
           createPage({
             path: slug,
             component: isPost ? postTemplate : pageTemplate,
