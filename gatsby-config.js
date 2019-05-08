@@ -85,11 +85,8 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        tableOfContents: {
-          heading: null,
-          maxDepth: 6
-        },
         plugins: [
+          `gatsby-remark-autolink-headers`,
           `gatsby-plugin-sharp`,
           {
             resolve: `gatsby-remark-images`,

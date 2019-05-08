@@ -19,13 +19,13 @@ const PostComments = props => {
 
   return (
     <div id="post-comments" className={classes.postComments}>
-      <FacebookProvider appId={facebook}>
+      {/* <FacebookProvider appId={facebook}>
         <Comments
           href={`${config.siteUrl}${slug}`}
           width="100%"
           colorScheme={props.theme.main.colors.fbCommentsColorscheme}
         />
-      </FacebookProvider>
+      </FacebookProvider> */}
     </div>
   );
 };
