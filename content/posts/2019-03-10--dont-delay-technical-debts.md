@@ -8,7 +8,7 @@ cover: avatars/avatar-code.png
 gist: >-
   The author feels that gist of this article can be written down some other day
   due to shortage of time and would like to  add the technical debt!
-slug: "2019/03/10/dont-delay-technical-debts/"
+slug: 2019/03/10/dont-delay-technical-debts/
 category: TechTalk
 categories:
   - TechTalk
@@ -20,7 +20,6 @@ tag:
   - Opinion
 draft: false
 ---
-
 #### Part 1 of 2
 
 Read the second part - [Coping up with technical debts](/2019/04/07/coping-with-technical-debts/)
@@ -35,10 +34,10 @@ Following article would explain most of scenarios with regards to frontend/web d
 - [Why can't debt be delayed?](#why-cant-debt-be-delayed)
 - [Product debt vs Technical debt](#product-debt-vs-technical-debt)
 - [Side-effects](#side-effects)
-  - [Frustrations and De-motivation for Development Teams.](#frustrations-and-de-motivation-for-development-teams)
-  - [“if it’s not broke, don’t fix it” disease.](#if-its-not-broke-dont-fix-it-disease)
-  - [Prolonged design limitation](#prolonged-design-limitation)
-  - [Reactive product developement instead of proactive.](#reactive-product-developement-instead-of-proactive)
+  * [Frustrations and De-motivation for Development Teams](#frustrations-and-de-motivation-for-development-teams)
+  * [“if it’s not broke, don’t fix it” disease](#if-its-not-broke-dont-fix-it-disease)
+  * [Prolonged design limitation](#prolonged-design-limitation)
+  * [Reactive product development instead of proactive](#reactive-product-development-instead-of-proactive)
 
 <!-- tocstop -->
 
@@ -99,3 +98,4 @@ So do you have any important tech-debt? Fix it now, because if it is not done no
 ---
 
 Read the second part - [Coping up with technical debts](/2019/04/07/coping-with-technical-debts/)
+

@@ -4,12 +4,16 @@ title: Understanding meta-property - newTarget
 subTitle: Digging deep into newTarget - `new.target` from ECMAScript 2015 (aka ES6)
 cover: avatars/avatar-js.png
 category: JavaScript
-categories: [JavaScript]
-slug: "2017/12/17/understanding-newTarget/"
+categories:
+  - JavaScript
+slug: 2017/12/17/understanding-newTarget/
 draft: false
-tag: [ES2015, ES6, ECMASCRIPT2015, JavaScript]
+tag:
+  - ES2015
+  - ES6
+  - ECMASCRIPT2015
+  - JavaScript
 ---
-
 `new.target` is one of newly introduced meta-properties that have made it to ECMAScript/JavaScript. It is also known as `newTarget` in official [ES2015 specifications](http://www.ecma-international.org/ecma-262/6.0/#sec-meta-properties). It lets you detect whether a function (constructor function) was called with `new` keyword or not.
 
 ---
@@ -27,7 +31,7 @@ Following section shall shed some more light on the newly available meta-propert
   - [Use Cases](#suse-cases)
 - [Introducing `newTarget`](#introducing-newtarget)
 - [Is `newTarget` just a syntactical sugar?](#is-newtarget-just-a-syntactical-sugar)
-- [Lexical new.target in arrow functions `()=>{}`](#lexical-newtarget-in-arrow-functions-)
+- [Lexical new.target in arrow functions `()=>{}`](#lexical-newtar-functions-)
 - [Polyfill](#polyfill)
 - [Browser Support](#browser-support)
 - [References](#references)
@@ -327,3 +331,4 @@ This is not polyfill-able property, as it is token/expression and uses property 
 For the interested species, refer [meeting notes from ES discussion](https://esdiscuss.org/notes/2015-01-27) on `newTarget`
 
 ---
+
